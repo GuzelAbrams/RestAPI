@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let studentsScore = (score, totalMaxScore ) =>{
+            let studentResult = score / totalMaxScore * 100;
+
+            if (typeof score !="number" || typeof totalMaxScore != "number"){
+                console.log("I can work only with numbers")
+                return;
+            }
+            if(studentResult>=90){
+                console.log(`You got an A ${studentResult}%`);
+            }else if(studentResult=>80){
+                console.log(`You got a B ${studentResult} %`);
+            }else if(studentResult>=70){
+                console.log(`You got a C ${studentResult} %`);
+            }else if(studentResult>=60){
+                console.log(`You got a D ${studentResult} %`);
+            }else if(studentResult>0){
+                console.log(`You got a F ${studentResult} %`)
+            }
+        }
+        studentsScore(13,20);
+        studentsScore(76,100);
+        studentsScore(97,100);
+        studentsScore(1,100);
+
+
+
+    </script>
+</body>
+</html>
